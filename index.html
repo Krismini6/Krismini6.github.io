@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>【你的名字】· 个人主页</title>
+<style>
+:root{
+  --bg:#f6f7f9;--card:#ffffff;--text:#1f2328;--muted:#656d76;
+  --line:#d8dee4;--accent:#0969da;--chip-bg:#ddf4ff;
+}
+*{box-sizing:border-box;margin:0}
+body{
+  background:var(--bg);color:var(--text);
+  font:16px/1.75 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+  padding:40px 20px;
+}
+.wrap{max-width:720px;margin:0 auto}
+header,section{
+  background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:28px 32px;margin-bottom:18px;
+}
+h1{font-size:27px;font-weight:600;letter-spacing:-.2px}
+.tagline{color:var(--muted);font-size:15px;margin-top:6px}
+.contact{margin-top:16px;font-size:14px;color:var(--muted)}
+.contact a{color:var(--accent);text-decoration:none}
+h2{
+  font-size:16px;font-weight:600;margin-bottom:16px;
+  padding-bottom:10px;border-bottom:1px solid var(--line);
+}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{background:var(--chip-bg);color:var(--accent);border-radius:999px;padding:5px 13px;font-size:13px}
+.item{margin-bottom:20px}
+.item:last-child{margin-bottom:0}
+.item h3{font-size:15px;font-weight:600}
+.item .meta{color:var(--muted);font-size:13px;margin-top:2px}
+.item p{font-size:14px;margin-top:8px;color:#31363b}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 0}
+@media(max-width:600px){
+  body{padding:20px 12px}
+  header,section{padding:22px 20px}
+  h1{font-size:23px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>【你的名字】</h1>
+    <p class="tagline">【一句话自我介绍 · 例如：计算机专业大二学生，正在学 Git 与前端】</p>
+    <p class="contact">
+      邮箱：<a href="mailto:【you@example.com】">【you@example.com】</a>
+      &nbsp;·&nbsp; GitHub：<a href="https://github.com/Krismini6">Krismini6</a>
+    </p>
+  </header>
+
+  <section>
+    <h2>关于我</h2>
+    <p style="font-size:14px;color:#31363b">
+      【两三句展开：你现在在学什么、对什么方向感兴趣、最近在做什么。写得具体一点，比"热爱编程"有用得多。】
+    </p>
+  </section>
+
+  <section>
+    <h2>技能</h2>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">HTML / CSS</span>
+      <span class="tag">Git</span>
+      <span class="tag">【补充你会的】</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>教育经历</h2>
+    <div class="item">
+      <h3>【学校名称】 · 【专业】</h3>
+      <div class="meta">【2024】 — 【2028】 · 本科在读</div>
+      <p>【相关课程或方向，例如：数据结构、计算机网络、数据库原理】</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>项目</h2>
+    <div class="item">
+      <h3>【项目名】</h3>
+      <div class="meta">【技术栈】 · 【时间】</div>
+      <p>【它解决什么问题？你负责哪部分？有什么可以量化的结果？】</p>
+    </div>
+    <div class="item">
+      <h3>【再放一个项目】</h3>
+      <div class="meta">【技术栈】 · 【时间】</div>
+      <p>【同上】</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>本站用 GitHub Pages 托管 · 最后更新：<span id="d"></span></p>
+  </footer>
+
+</div>
+<script>document.getElementById('d').textContent=new Date().toLocaleDateString('zh-CN')</script>
+</body>
+</html>
